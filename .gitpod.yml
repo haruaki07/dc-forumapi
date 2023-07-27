@@ -13,3 +13,8 @@ tasks:
       npm install
   - command: |
       docker compose -f docker-compose.dev.yml up -d
+
+vscode:
+  extensions:
+    - esbenp.prettier-vscode
+    - dbaeumer.vscode-eslint
