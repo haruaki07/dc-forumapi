@@ -1,0 +1,15 @@
+ports:
+  - name: App
+    port: 3000
+    onOpen: notify
+    visibility: public
+    protocol: http
+
+tasks:
+  - init: |
+      docker compose -f docker-compose.dev.yml pull
+  - init: |
+      nvm install
+      npm install
+  - command: |
+      docker compose -f docker-compose.dev.yml up -d
