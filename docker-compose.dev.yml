@@ -27,6 +27,9 @@ services:
     environment:
       HOST: 0.0.0.0
       PGHOST: postgres
+      PGDATABASE: forumdb
+      PGUSER: postgres
+      PGPASSWORD: postgres
     ports:
       - 3000:3000
     volumes:
